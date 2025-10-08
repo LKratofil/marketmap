@@ -5,8 +5,9 @@ This repository contains a single-page Leaflet web app that visualizes the embed
 ## Files
 
 - ``index.html`` – self-contained interactive map with controls to filter by line of business, color-coded markers by region, and a download button for the enriched CSV.
-- ``Location List Oct 2025 with locations.csv`` – processed CSV that adds ``Latitude``, ``Longitude``, and ``Location`` columns computed from the city/state pairing.
+- ``Location List Oct 2025 with locations.csv`` – processed CSV that adds ``Latitude``, ``Longitude``, and ``Location`` columns produced by geocoding each address.
 - ``data_with_locations.json`` – JSON export of the enriched dataset used by the HTML page.
+- ``update_locations.py`` – helper script that regenerates the geocoded outputs using the US Census batch geocoder with OpenStreetMap fallbacks.
 - ``Location List Oct 2025.csv`` – original dataset provided in the repository.
 
 ## Usage
