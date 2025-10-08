@@ -4,8 +4,9 @@ This repository contains a single-page Leaflet web app that visualizes the embed
 
 ## Files
 
-- ``index.html`` – self-contained interactive map with controls to filter by line of business, color-coded markers by region, and a download button for the enriched CSV. The full dataset is embedded directly in this file so it can be used standalone.
+- ``index.html`` – self-contained interactive map with controls to filter by line of business, color-coded markers by region, and a download button for the enriched CSV.
 - ``Location List Oct 2025 with locations.csv`` – processed CSV that adds ``Latitude``, ``Longitude``, and ``Location`` columns computed from the city/state pairing.
+- ``data_with_locations.json`` – JSON export of the enriched dataset used by the HTML page.
 - ``Location List Oct 2025.csv`` – original dataset provided in the repository.
 
 ## Usage
