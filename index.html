@@ -17549,8 +17549,12 @@
           return '';
         }
         const str = String(value);
-        if (str.includes('"') || str.includes(',') || str.includes('
-')) {
+        if (
+          str.includes('"') ||
+          str.includes(',') ||
+          str.includes('\n') ||
+          str.includes('\r')
+        ) {
           return '"' + str.replace(/"/g, '""') + '"';
         }
         return str;
@@ -17559,8 +17563,7 @@
       data.forEach((row) => {
         rows.push(headers.map((header) => escapeCsv(row[header])).join(','));
       });
-      return rows.join('
-');
+      return rows.join('\n');
     }
 
     document.getElementById('downloadCsv').addEventListener('click', () => {
